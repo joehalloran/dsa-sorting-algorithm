@@ -19,13 +19,13 @@ input array[]
 low ← 0
 high ← array.length
 while low < high do
-    while array[low] % 2 = 0 and low < list.length do // Find next odd numbers at bottom of list or stop at end of list (when no odd numbers present)
-        low ← low + 1   // Increment
+    while array[low] % 2 = 0 and low < list.length do       // Find next odd numbers at bottom of list
+        low ← low + 1           // Increment
     end while
-    while arra[high] % 2 = 1 and high >= 0 do // Find next even number at top of list or stop at begining of list (when no even numbers present)
-        high ← high - 1     // Decrement
+    while array[high] % 2 = 1 and high >= 0 do              // Find next even number at top of list
+        high ← high - 1         // Decrement
     end while
-    if low < high:              // Only swap if odd number is lower in list than even numbers
+    if low < high:                              // Only swap if odd number is lower in list than even numbers
         // Swap values
         temo ← array[low]
         array[low] ← array[high]
@@ -57,18 +57,26 @@ A(n) {
 
                         A(5) = A(4) + A(2)
                               /          \
-            A(4) = A(3) + A(1)            A(2) = *1*
-                   /         \                   /
-          A(3) = *2*          A(1) = *1*        /
-                   \          /                /                        
-               A(4)= 2 + 1 = *3*              /
-                                \            /
-                          A(5) = 3     +    1 = *4*
+            A(4) = A(3) + A(1)            A(2) = 1
+                   /         \                  /
+          A(3) = 2          A(1) = 1           /
+                   \          /               /                        
+               A(4)= 2 + 1 = 3               /
+                               \           /
+                         A(5) = 3    +    1 = 4
 
 ### All possible arrangements for A(6)
+
+A(6) = 6
+
 MMMMMM
+
 CMMM
+
 MCMM
+
 MMCM
+
 MMMC
+
 CC
