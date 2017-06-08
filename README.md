@@ -5,6 +5,15 @@ Joe Halloran
 
 ### Graph 1: Run time of various sorting algorithms
 
+This graph shows the run time of 4 sorting algorithms for randomly generated arrays of lengths strating at 10,000 all the way up to 200,000.
+
+Merge sort and quick sort are so close together I have a separate more detail graph to ilustrate the comparison
+
+![graph 1](assets/graph1.png)
+
+![graph 2](assets/graph2.png)
+
+
 ### Graph 2: Comparison of runtime for various sorting algorithms
 
 ### Time complexity discussion
