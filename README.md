@@ -13,8 +13,9 @@ Merge sort and quick sort are so close together I have a separate more detail gr
 
 ![graph 2](assets/graph2.png)
 
-
 ### Graph 2: Comparison of runtime for various sorting algorithms
+
+![graph 3](assets/graph3.png)
 
 ### Time complexity discussion
 
