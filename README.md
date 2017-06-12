@@ -38,10 +38,10 @@ For this reason, a focused comparison of merge sort and quick sort is supplied i
 The time taken to complete bubble sort and insertion sort grows exponentially as the array lengths increase. Both have time complexity of 0(n^2) (in the 'average' case), meaning the time to execute increases at an accelerated rate, where the array length increase at a fixed rate. This makes them entirely undesirable for sorting data on any serious scale.
 
 As observed above, merge sort and quick sort, are much faster. They have a time 0(n log(n)) (in the 'average' case). This means the increase in execution time decelerates as the array length increases at a fixed rate. This is not to say it get *quicker* as the array length increases (that would be truely miraculous). It means that the rate of growth slows down, much like it does in human beings: babies grow most rapidly in the first months of their life. This is a highly desirable property for sorting algorithms, as it means the additional time cost decreases every time you add one to the array length. This means both arrays are well suited to sorting large data sets.
-
+<div style="page-break-after: always;"></div>
 ## Part 2: Segregate even and odd numbers
 
-### Pseudo code 
+### Pseudo code
 
 ```
 // Pseudo code
@@ -65,14 +65,14 @@ end while
 
 ### Time complexity discussion
 
-The above algorithm has time complexity 0(n). This means the number operations required to complete the algorithm has a linear relationship to the length of the input array. This can be understood if we look in detail at the operation of the algorithm. 
+The above algorithm has time complexity 0(n). This means the number operations required to complete the algorithm has a linear relationship to the length of the input array. This can be understood if we look in detail at the operation of the algorithm.
 
 Take a *average case*, which we can hypothesise to be where odd and even numbers alternate in the array. The algorithm includes an incrementing `while` loop and decrementing `while` loop. These loops work their way from the top and bottom, swapping odd numbers for even where necessary along the way, eventually meeting in the middle. At this point the first top-level while loop, `while low < high`, kicks in and terminates the algorithm with the array now sorted. This prevents the incrementer and decrementer passing each other and running needlessly through the sorted portions of the array. This process shows the work required to complete the algorithm is directly and proportionally dependant on the array length, justifying the conclusion that is has time complexity O(n).
 
 Given a *worse case*, an array with odd numbers in the first half even numbers in the second half, the incrementer and decrementer behave in the same way (meeting in the middle and stopping). The only difference is the number of swaps that take place. As the number of swaps is dependent on the overall array length, we do not need to adapt our overall assessment that the algorithm is of time complexity O(n).
 
-In the *best case*, a sorted array, again the incrementer and decrementer loops never pass each other and no swaps occur. So again the algorithm is O(n): it loops through the array once; its complexity has a linear relationship to the array length. 
-
+In the *best case*, a sorted array, again the incrementer and decrementer loops never pass each other and no swaps occur. So again the algorithm is O(n): it loops through the array once; its complexity has a linear relationship to the array length.
+<div style="page-break-after: always;"></div>
 ## Part 3: Recursion
 
 ### Part 3.1: Pizza
@@ -102,7 +102,7 @@ pizza(4) = 2 + pizza(3)
                                                         \
                                                     pizza(1) = 2
                                                      /
-                                    pizza(2) = 2 + 2 
+                                    pizza(2) = 2 + 2
                                     /
                    pizza(3) = 2 + 4
                    /
@@ -118,7 +118,7 @@ A recursive algorithm to find the number of possible arrangements for parking mo
 
 ### Recursive method for A(n) - pseudo code
 
-This algorithm works on the premise that the problem scope can be reduced in two ways: (1) where the first space is taken up by a motorbike, and (2) where the first 3 spaces are taken by the car. The solution for any value of *n* is the sum of case (1) and case (2). 
+This algorithm works on the premise that the problem scope can be reduced in two ways: (1) where the first space is taken up by a motorbike, and (2) where the first 3 spaces are taken by the car. The solution for any value of *n* is the sum of case (1) and case (2).
 
 Therefore the recursion call take the structure `return A(n-1) + A(n-3)`, i.e. all the possibilities with a motorbike first, plus all the possibilities with a car first.
 
@@ -148,8 +148,8 @@ A(n) {
                          A(5) = 3    +    1
                                     |
                                Returns 4
-                           
-                                      
+
+
 #### All possible arrangements for A(6)
 
 A(6) = 6
@@ -160,7 +160,11 @@ A(6) = 6
 * MMCM
 * MMMC
 * CC
+<div style="page-break-after: always;"></div>
 
-# Refs
-http://bigocheatsheet.com/
-http://discrete.gr/complexity/
+# Bibliography
+* Big 0 Cheat Sheet. Available at:<br />
+http://bigocheatsheet.com/ (Accessed: 12 June 2017).
+
+* A Gentle Introduction to Algorithm Complexity Analysis. Available at:<br />
+http://discrete.gr/complexity/ (Accessed: 12 June 2017).

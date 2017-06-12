@@ -28,7 +28,7 @@ public class Sort_Tester {
         java.util.Random random = new java.util.Random();
 
 
-        writeToFile("Array length, Bubble sort, Insertion Sort, Merge Sort\n");
+        writeToFile("Array length, Bubble sort, Insertion Sort, Merge Sort, QuickS ort\n");
 
         for (int j = 1000; j < 200001; j = j +1000) {
             int[] arr = new int[j];
