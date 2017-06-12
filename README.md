@@ -51,13 +51,13 @@ input array[]
 low ← 0
 high ← array.length
 while low < high do
-    while low < array.length and array[low] % 2 = 0 do       // While in range and not odd
+    while low < array.length and array[low] % 2 = 0 do  // While in range and not odd
         low ← low + 1           // Increment
     end while
-    while high >= 0 and array[high] % 2 = 1 do              // While in range and not even
+    while high >= 0 and array[high] % 2 = 1 d    // While in range and not even
         high ← high - 1         // Decrement
     end while
-    if low < high:                              // Only swap if odd number is lower in list than even number
+    if low < high:        // Only swap if odd number is lower in list than even number
         // Swap values
         temo ← array[low]
         array[low] ← array[high]
