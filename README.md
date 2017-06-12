@@ -23,15 +23,15 @@ For this reason, a focused comparison of merge sort and quick sort is supplied i
 
 ### *Fig 1: Run time of various sorting algorithms*
 
-![graph 1](assets/graph1.png)
+![graph 1](https://github.com/joehalloran/dsa-sorting-algorithm/blob/master/assets/graph1.png)
 
 ### *Fig 2: Run time of merge sort and quick sort algorithms only*
 
-![graph 2](assets/graph2.png)
+![graph 2](https://github.com/joehalloran/dsa-sorting-algorithm/blob/master/assets/graph2.png)
 
 ### *Fig 3: Comparison of runtime for various sorting algorithms*
 
-![graph 3](assets/graph3.png)
+![graph 3](https://github.com/joehalloran/dsa-sorting-algorithm/blob/master/assets/graph3.png)
 
 ### Time complexity discussion
 
