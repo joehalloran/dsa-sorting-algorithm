@@ -37,7 +37,7 @@ For this reason, a focused comparison of merge sort and quick sort is supplied i
 
 The time taken to complete bubble sort and insertion sort grows exponentially as the array lengths increase. Both have time complexity of *O(n^2)* in the average case *("Big-O Algorithm Complexity Cheat Sheet")*, meaning the time to execute increases at an accelerated rate, where the array length increases at a fixed rate. This makes them entirely undesirable for sorting data on a large scale.
 
-As observed above, merge sort and quick sort, are much faster. They have a time *O(n log(n))* in the 'average' case *("Big-O Algorithm Complexity Cheat Sheet")*. This means the rate of increase in execution time decelerates as the array length increases at a fixed rate. This is not to say it get *quicker* as the array length increases (that would be truly miraculous). It means that the rate of growth slows down, much like it does in human beings; babies grow most rapidly in the first months of their life. This is a highly desirable property for sorting algorithms, as it means the additional cost decreases as the array length increases. This means both arrays are well suited to sorting large data sets.
+As observed above, merge sort and quick sort, are much faster. They have a time complexity of *O(n log(n))* in the 'average' case *("Big-O Algorithm Complexity Cheat Sheet")*. This means the rate of increase in execution time decelerates as the array length increases at a fixed rate. This does not mean it gets quicker as the array length increases (that would be truly miraculous). It means that the rate of growth slows down, much like it does in human beings; babies grow most rapidly in the first months of their life. This is a highly desirable property for sorting algorithms, as it means the additional cost decreases as the array length increases. This means both arrays are well suited to sorting large data sets.
 
 <div style="page-break-after: always;"></div>
 
@@ -66,17 +66,17 @@ end while
 
 ### Time complexity discussion
 
-The above algorithm has time complexity O(n). This means the number operations required to complete the algorithm has a linear relationship to the length of the input array. This can be understood if we look in detail at the operation of the algorithm.
+The above algorithm has time complexity *O(n)*. This means the number operations required to complete the algorithm has a linear relationship to the length of the input array. This can be understood if we look in detail at the operation of the algorithm.
 
-Take a *average case*, which we can hypothesise to be where odd and even numbers alternate in the array. The algorithm includes an incrementing `while` loop and a decrementing `while` loop. These loops work their way from the top and bottom, swapping odd numbers for even where necessary along the way, eventually meeting in the middle. At this point the first top-level while loop, `while low < high`, kicks in and terminates the algorithm with the array now sorted. This prevents the incrementer and decrementer passing each other and running needlessly through the sorted portions of the array. This process shows the work required to complete the algorithm is directly and proportionally dependant on the array length, justifying the conclusion that is has time complexity O(n).
+Take the *average case*, which we can hypothesise to be where odd and even numbers alternate in the array. The algorithm includes an incrementing `while` loop and a decrementing `while` loop. These loops work their way from the top and bottom, swapping odd numbers for even where necessary along the way, eventually meeting in the middle. At this point the top-level while loop, `while low < high`, kicks in and terminates the algorithm with the array now sorted. This prevents the incrementer and decrementer passing each other and running needlessly through the sorted portions of the array. This means the algorithm only runs through the array once, showing the work required to complete the algorithm is directly and proportionally dependent on the array length, justifying the conclusion that is has time complexity *O(n)*.
 
-Given a *worse case*, an array with odd numbers in the first half even numbers in the second half, the incrementer and decrementer behave in the same way (meeting in the middle and stopping). The only difference is the number of swaps that take place. As the number of swaps is dependent on the overall array length, we do not need to adapt our overall assessment that the algorithm is of time complexity O(n).
+Given a *worse case*, an array with odd numbers in the first half even numbers in the second half, the incrementer and decrementer behave in the same way (meeting in the middle and stopping). The only difference is the number of swaps that take place. As the number of swaps is dependent on the overall array length, we do not need to adapt our overall assessment that the algorithm is of time complexity *O(n)*.
 
-In the *best case*, a sorted array, again the incrementer and decrementer loops never pass each other and no swaps occur. So again the algorithm is O(n): it loops through the array once; its complexity has a linear relationship to the array length.
+In the *best case*, a sorted array, again the incrementer and decrementer loops never pass each other and no swaps occur. So again the algorithm is *O(n)*: it loops through the array once; its complexity has a linear relationship to the array length.
 
-This conclusion is supported by the linear trend in *fig 4*.
+This conclusion is supported by the linear trend seen in *fig 4*.
 
-### *Fig 4: Comparison of runtime for various sorting algorithms*
+### *Fig 4: Comparison of runtime for odd-even sorting algorithms*
 
 ![graph 4](https://github.com/joehalloran/dsa-sorting-algorithm/blob/master/assets/graph4.png?raw=true)
 
@@ -157,7 +157,7 @@ A(n) {
                                \           /
                          A(5) = 3    +    1
                                     |
-                               Returns 4
+                               returns 4
 
 
 #### All possible arrangements for A(6)
