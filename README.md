@@ -78,7 +78,7 @@ This conclusion is supported by the linear trend in *fig 4*.
 
 ### *Fig 4: Comparison of runtime for various sorting algorithms*
 
-![graph 4](https://github.com/joehalloran/dsa-sorting-algorithm/blob/master/assets/oddevengraph.png?raw=true)
+![graph 4](https://github.com/joehalloran/dsa-sorting-algorithm/blob/master/assets/graph4.png?raw=true)
 
 <div style="page-break-after: always;"></div>
 
