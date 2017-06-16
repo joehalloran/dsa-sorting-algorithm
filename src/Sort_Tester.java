@@ -28,9 +28,9 @@ public class Sort_Tester {
         java.util.Random random = new java.util.Random();
 
 
-        writeToFile("Array length, Bubble sort, Insertion Sort, Merge Sort, QuickS ort\n");
+        writeToFile("Array length, Odd even, Bubble sort, Insertion Sort, Merge Sort, Quick Sort\n");
 
-        for (int j = 1000; j < 200001; j = j +1000) {
+        for (int j = 100000; j < 100000001; j = j +100000) {
             int[] arr = new int[j];
             System.out.println(j);
             writeToFile(j + ",");
@@ -53,39 +53,47 @@ public class Sort_Tester {
 
             // Setup output file
 
-
             start = System.nanoTime();
-            x.BubbleSort(bubbleArray);
+            x.oddEvenSort(arr);
             end = System.nanoTime();
             elapsedTime = end - start;
             //printArray(bubbleArray);
-            System.out.println("Bubble sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
-            writeToFile(elapsedTime / 1000000 + ",");
-
-            start = System.nanoTime();
-            x.insertionSort(insertArray);
-            end = System.nanoTime();
-            elapsedTime = end - start;
-            // printArray(insertArray);
-            System.out.println("Insertion sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
-            writeToFile(elapsedTime / 1000000 + ",");
-
-            start = System.nanoTime();
-            x.mergSort(mergeArray, 0, mergeArray.length - 1);
-            end = System.nanoTime();
-            elapsedTime = end - start;
-            //printArray(mergeArray);
-            System.out.println("Merge sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
-            writeToFile(elapsedTime / 1000000 + ",");
-
-
-            start = System.nanoTime();
-            x.quickSort(quickArray, 0, quickArray.length - 1, x);
-            end = System.nanoTime();
-            elapsedTime = end - start;
-            //printArray(quickArray);
-            System.out.println("Quick sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
+            System.out.println("Odd eve sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
             writeToFile(elapsedTime / 1000000 + "\n");
+
+
+           start = System.nanoTime();
+           x.BubbleSort(bubbleArray);
+           end = System.nanoTime();
+           elapsedTime = end - start;
+           //printArray(bubbleArray);
+           System.out.println("Bubble sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
+           writeToFile(elapsedTime / 1000000 + ",");
+
+           start = System.nanoTime();
+           x.insertionSort(insertArray);
+           end = System.nanoTime();
+           elapsedTime = end - start;
+           // printArray(insertArray);
+           System.out.println("Insertion sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
+           writeToFile(elapsedTime / 1000000 + ",");
+
+           start = System.nanoTime();
+           x.mergSort(mergeArray, 0, mergeArray.length - 1);
+           end = System.nanoTime();
+           elapsedTime = end - start;
+           //printArray(mergeArray);
+           System.out.println("Merge sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
+           writeToFile(elapsedTime / 1000000 + ",");
+
+
+           start = System.nanoTime();
+           x.quickSort(quickArray, 0, quickArray.length - 1, x);
+           end = System.nanoTime();
+           elapsedTime = end - start;
+           //printArray(quickArray);
+           System.out.println("Quick sort took approximately: " + elapsedTime / 1000000 + " miliseconds");
+           writeToFile(elapsedTime / 1000000 + "\n");
 
         }
 
